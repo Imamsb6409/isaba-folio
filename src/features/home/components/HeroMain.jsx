@@ -24,7 +24,7 @@ export default function HeroMain() {
   });
 
   return (
-    <section className="relative min-h-[95vh] flex items-center justify-center px-6 py-12 overflow-hidden">
+    <section className="relative min-h-[95vh] flex items-center justify-center px-4 sm:px-6 py-12 overflow-hidden">
       {/* Animated Horizon Background */}
       <div className="absolute inset-0 z-0">
         <div
@@ -36,31 +36,34 @@ export default function HeroMain() {
         <div className="absolute inset-0 bg-dark/20 backdrop-blur-[2px]"></div>
       </div>
 
-      <div className="relative z-10 w-full max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-6 items-center">
+      {/* Grid Utama: Otomatis 1 kolom di HP, 3 kolom mulai ukuran layar Medium (md) */}
+      <div className="relative z-10 w-full max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-4 items-center">
+        
         {/* --- SISI KIRI: CORE EXPERTISE --- */}
+        {/* order-2 membuat section ini turun ke bawah foto saat di HP, tapi kembali ke kiri (order-1) di desktop */}
         <div className="reveal order-2 md:order-1 flex flex-col items-center md:items-start text-center md:text-left space-y-6">
-          <div className="space-y-2">
-            <span className="text-mint/60 font-mono text-xs uppercase tracking-widest block">
+          <div className="space-y-2 w-full max-w-sm md:max-w-none">
+            <span className="text-mint font-mono text-xs uppercase tracking-widest block">
               01 / Focus
             </span>
-            <h3 className="text-xl font-bold  flex items-center gap-2 justify-center md:justify-start">
+            <h3 className="text-lg sm:text-xl font-bold flex items-center gap-2 justify-center md:justify-start">
               <IconBrandReact className="text-mint animate-pulse" size={20} />{" "}
               Fullstack Dev
             </h3>
-            <p className="text-muted text-sm max-w-xs leading-relaxed">
+            <p className="text-muted text-sm leading-relaxed">
               Membangun aplikasi web ujung-ke-ujung (end-to-end) yang responsif
               dan skalabel.
             </p>
           </div>
 
-          <div className="space-y-2">
-            <span className="text-mint/60 font-mono text-xs uppercase tracking-widest block">
+          <div className="space-y-2 w-full max-w-sm md:max-w-none">
+            <span className="text-mint font-mono text-xs uppercase tracking-widest block">
               02 / Style
             </span>
-            <h3 className="text-xl font-bold  flex items-center gap-2 justify-center md:justify-start">
+            <h3 className="text-lg sm:text-xl font-bold flex items-center gap-2 justify-center md:justify-start">
               <IconCpu className="text-mint" size={20} /> Creative Motion
             </h3>
-            <p className="text-muted text-sm max-w-xs leading-relaxed">
+            <p className="text-muted text-sm leading-relaxed">
               Menggabungkan interaksi dinamis GSAP agar UI terasa hidup dan
               interaktif.
             </p>
@@ -68,31 +71,32 @@ export default function HeroMain() {
         </div>
 
         {/* --- SISI TENGAH: PROFILE & BRANDING --- */}
+        {/* order-1 menjamin profil kamu nampil paling atas saat dibuka lewat browser HP */}
         <div className="reveal order-1 md:order-2 flex flex-col items-center text-center">
           {/* Foto Profile dengan Frame Horizon */}
           <div className="relative mb-6">
-            <div className="w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden border-2 border-mint/30 p-1.5 bg-dark/60 backdrop-blur-md shadow-2xl">
+            <div className="w-36 h-36 sm:w-40 sm:h-40 md:w-44 md:h-44 rounded-full overflow-hidden border-2 border-mint/30 p-1.5 bg-dark/60 backdrop-blur-md shadow-2xl">
               <img
-                src={imamFoto} // GANTI DENGAN FOTO KAMU
+                src={imamFoto}
                 alt="Imam Sandy Bachtiar"
                 className="w-full h-full object-cover rounded-full grayscale hover:grayscale-0 transition-all duration-500"
               />
             </div>
-            {/* Soft Glow di belakang foto */}
             <div className="absolute inset-0 bg-mint/20 blur-2xl -z-10 rounded-full"></div>
           </div>
 
           {/* Nama & Status */}
-          <span className="text-muted font-mono text-xs tracking-[0.2em] uppercase mb-2">
+          <span className="text-muted font-mono text-xs tracking-[0.2em] uppercase mb-3 block">
             Imam Sandy Bachtiar
           </span>
 
-          <h1 className="text-4xl md:text-5xl font-display font-bold text-black leading-tight mb-6">
-            CRAFTING <br />
-            <span className=" italic drop-shadow-[0_0_15px_rgba(176,228,204,0.3)]">
-              DIGITAL
+          {/* Ukuran font responsif dari text-3xl sampai text-5xl */}
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold leading-tight mb-6 tracking-tight">
+            BUILDING FAST, <br />
+            <span className="text-mint italic drop-shadow-[0_0_15px_rgba(2,132,199,0.1)]">
+              INTERACTIVE
             </span>{" "}
-            SOUL
+            WEBSITES.
           </h1>
 
           <motion.div
@@ -104,16 +108,16 @@ export default function HeroMain() {
           </motion.div>
 
           {/* CTA Buttons */}
-          <div className="flex flex-wrap justify-center gap-3">
+          <div className="flex flex-row justify-center gap-3 w-full">
             <Link
               to="/projects"
-              className="px-6 py-3 bg-mint text-dark rounded-xl text-sm font-bold flex items-center gap-2 hover:scale-105 transition-transform shadow-lg shadow-mint/10"
+              className="px-5 py-3 bg-mint text-white font-mono text-xs rounded-xl font-bold flex items-center gap-2 hover:scale-105 transition-transform shadow-lg shadow-mint/10"
             >
-              Projects <IconArrowRight size={16} />
+              Projects <IconArrowRight size={14} />
             </Link>
             <a
               href="#mini-about"
-              className="px-6 py-3 bg-surface/50 border border-white/5 backdrop-blur-md rounded-xl text-sm font-bold hover:bg-white/10 transition-colors"
+              className="px-5 py-3 bg-surface/30 border border-surface text-xs font-mono rounded-xl font-bold hover:bg-surface/60 transition-colors"
             >
               Story
             </a>
@@ -121,37 +125,37 @@ export default function HeroMain() {
         </div>
 
         {/* --- SISI KANAN: CODE EMBLEM & MOTO --- */}
-        <div className="reveal order-3 flex flex-col items-center md:items-end text-center md:text-right space-y-8">
+        <div className="reveal order-3 flex flex-col items-center md:items-end text-center md:text-right space-y-6 md:space-y-8">
           {/* Kotak Lambang Kode Minimalis */}
-          <div className="p-6 bg-surface/20 border border-white/5 rounded-3xl max-w-xs relative group overflow-hidden backdrop-blur-sm">
+          <div className="p-6 bg-surface/20 border border-surface/40 rounded-3xl max-w-xs relative group overflow-hidden backdrop-blur-sm text-left md:text-right">
             <div className="absolute -right-6 -bottom-6 text-mint/5 opacity-10 group-hover:opacity-20 transition-opacity">
               <IconCode size={120} />
             </div>
             <IconTerminal
               className="text-mint mb-3 mx-auto md:ml-auto md:mr-0"
-              size={28}
+              size={24}
             />
-            <p className="font-mono text-xs  mb-2">&lt;code_philosophy&gt;</p>
+            <p className="font-mono text-xs mb-2 text-mint">&lt;santri_logic&gt;</p>
             <p className="text-muted text-xs leading-relaxed">
-              "Ubah problem kompleks menjadi solusi digital yang simpel, bersih,
-              dan berestetika tinggi."
+              "Mencari berkah lewat baris kode. Membangun sistem yang
+              bermanfa'at, rapi, dan cepat biar nggak bikin user emosi."
             </p>
           </div>
 
-          {/* Statistik Ringkas atau Status Tambahan */}
-          <div className="font-mono text-xs text-muted space-y-1">
+          {/* Statistik Ringkas */}
+          <div className="font-mono text-[11px] text-muted space-y-1 w-full text-center md:text-right">
             <p>
-              Loc: <span className="">Tangerang Selatan, ID</span>
+              Loc: <span className="text-current font-bold">Tangerang Selatan, ID</span>
             </p>
             <p>
-              Stack: <span className="">React / Node / GSAP</span>
+              Stack: <span className="text-current font-bold">React / JavaScript / Tailwind</span>
             </p>
           </div>
         </div>
       </div>
 
       {/* Scroll Down Indicator */}
-      <div className="absolute bottom-6 animate-bounce text-mint/40 z-10">
+      <div className="absolute bottom-4 animate-bounce text-mint/40 z-10">
         <IconChevronDown size={20} />
       </div>
     </section>

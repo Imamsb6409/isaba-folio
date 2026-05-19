@@ -51,18 +51,18 @@ export default function Contact() {
                 href="mailto:your@email.com"
                 className="flex items-center gap-4 group"
               >
-                <div className="p-3 bg-surface rounded-2xl group-hover:bg-accent transition-colors">
+                <div className="p-3 bg-surface rounded-2xl group-hover:bg-mint transition-colors">
                   <IconMail size={20} />
                 </div>
-                <span className="text-lg hover:text-accent transition-colors">
+                <span className="text-lg hover:text-mint transition-colors">
                   dsandalpha@gmail.com
                 </span>
               </a>
               <a href="https://wa.me/6287747394647" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 group">
-                <div className="p-3 bg-surface rounded-2xl group-hover:bg-accent transition-colors">
+                <div className="p-3 bg-surface rounded-2xl group-hover:bg-mint transition-colors">
                   <IconBrandWhatsapp size={20} />
                 </div>
-                <span className="text-lg hover:text-accent transition-colors">
+                <span className="text-lg hover:text-mint transition-colors">
                   +62 877 4739 4647
                 </span>
               </a>
