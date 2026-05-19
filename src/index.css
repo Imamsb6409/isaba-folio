@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@theme {
+  /* Palet Baru: Krem & Biru Langit */
+  --color-dark: #fbf9f4;        /* Krem terang (Sangat estetik untuk background) */
+  --offset-dark: #f4eee1;      /* Krem sedikit lebih pekat untuk variasi kartu/section */
+  --color-surface: #eadecc;     /* Krem gelap/tan lembut untuk border atau card accent */
+  --color-accent: #38bdf822;    /* Biru langit transparan untuk efek glow background */
+  --color-mint: #0284c7;        /* Biru langit pekat (Deep Sky Blue) untuk text highlight/CTA */
+  --color-muted: #6b7280;       /* Abu-abu netral untuk teks sekunder (sub-judul) */
+  
+  --font-display: "Clash Display", sans-serif;
+  --font-mono: "Space Mono", monospace;
+}
+
+/* Reset & Base Styles */
+* {
+  scroll-behavior: smooth;
+}
+
+:root {
+  color-scheme: light; /* Diubah ke light karena background kita sekarang terang */
+  background-color: var(--color-dark);
+  color: #1f2937; /* Warna teks utama diubah ke hitam keabuan agar kontras di atas krem */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-dark);
+  color: #1f2937;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Scrollbar Custom disesuaikan dengan tema terang */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-dark);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-surface);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-mint);
+}
+
+/* Selection color */
+::selection {
+  background-color: var(--color-mint);
+  color: white; /* Saat teks diblok, warna tulisan jadi putih */
+}
+
+#root {
+  width: 100%;
+}
+
+@layer utilities {
+  .animate-mesh-flow {
+    animation: mesh-flow 25s ease-in-out infinite alternate;
+  }
+
+  /* Animasi mesh flow diubah agar warnanya berputar di sekitar krem, beige, dan biru langit lembut */
+  @keyframes mesh-flow {
+    0% {
+      transform: translate(0, 0) rotate(0deg) scale(1);
+      background-color: #fbf9f4;
+    }
+    33% {
+      transform: translate(-5%, 10%) rotate(5deg) scale(1.1);
+      background-color: #e0f2fe; /* Sentuhan biru langit sangat muda */
+    }
+    66% {
+      transform: translate(10%, -5%) rotate(-5deg) scale(0.9);
+      background-color: #f4eee1;
+    }
+    100% {
+      transform: translate(0, 0) rotate(0deg) scale(1);
+      background-color: #fbf9f4;
+    }
+  }
+}
