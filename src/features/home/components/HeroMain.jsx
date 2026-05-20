@@ -104,7 +104,7 @@ export default function HeroMain() {
             transition={{ repeat: Infinity, duration: 4 }}
             className="mb-8 px-4 py-1 border border-mint/30 rounded-full bg-mint/5 text-mint text-[10px] font-mono tracking-widest uppercase"
           >
-            Open for Collaboration
+            Open to work opportunities & collaborations
           </motion.div>
 
           {/* CTA Buttons */}
@@ -148,7 +148,7 @@ export default function HeroMain() {
               Loc: <span className="text-current font-bold">Tangerang Selatan, ID</span>
             </p>
             <p>
-              Stack: <span className="text-current font-bold">React / JavaScript / Tailwind</span>
+              Stack: <span className="text-current font-bold">React / JavaScript / Tailwindcss</span>
             </p>
           </div>
         </div>

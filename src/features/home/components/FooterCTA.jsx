@@ -30,13 +30,13 @@ export default function FooterCTA() {
 
         {/* Sosmed & Kontak Tambahan Mini */}
         <div className="flex flex-wrap justify-center gap-6 text-sm font-mono text-muted border-t border-surface/40 pt-8">
-          <a href="mailto:emailmu@domain.com" className="flex items-center gap-2 hover:text-mint transition-colors">
-            <IconMail size={16} /> emailmu@domain.com
+          <a href="mailto:dsandalpha@gmail.com" className="flex items-center gap-2 hover:text-mint transition-colors">
+            <IconMail size={16} /> dsandalpha@gmail.com
           </a>
-          <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="flex items-center gap-2 hover:text-mint transition-colors">
+          <a href="https://linkedin.com/in/imam-sandy-bachtiar-1351b8385/" target="_blank" rel="noreferrer" className="flex items-center gap-2 hover:text-mint transition-colors">
             <IconBrandLinkedin size={16} /> LinkedIn
           </a>
-          <a href="https://github.com" target="_blank" rel="noreferrer" className="flex items-center gap-2 hover:text-mint transition-colors">
+          <a href="https://github.com/Imamsb6409" target="_blank" rel="noreferrer" className="flex items-center gap-2 hover:text-mint transition-colors">
             <IconBrandGithub size={16} /> GitHub
           </a>
         </div>

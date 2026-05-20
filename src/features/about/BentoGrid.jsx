@@ -103,7 +103,7 @@ export default function BentoGrid() {
         <Card className="md:col-span-1 md:row-span-1 grid grid-cols-2 grid-rows-2 gap-2">
           {/* Github */}
           <a
-            href="https://github.com/imamsb6409"
+            href="https://github.com/Imamsb6409"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center bg-dark/40 rounded-2xl hover:bg-mint hover:text-dark transition-all border border-white/5 group"
